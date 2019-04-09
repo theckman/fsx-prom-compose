@@ -112,8 +112,8 @@ services:
     environment:
       ACME_AGREE: 'true'
     ports:
-      - 0.0.0.0:80:2015
-      - 0.0.0.0:8443:443
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
     volumes:
       - ./caddy/Caddyfile:/etc/Caddyfile
     networks:
