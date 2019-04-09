@@ -36,6 +36,27 @@ scrape_configs:
     static_configs:
          - targets: ['localhost:9090']
 
+  - job_name: 'fsx00'
+
+    scrape_interval: 10s
+    static_configs:
+      - targets:
+          - '35.203.174.252:6111'
+          - '35.203.174.252:6110'
+
+  # - job_name: 'caddy'
+
+  #   # Override the global default and scrape targets from this job every 5 seconds.
+  #   scrape_interval: 5s
+
+  #   dns_sd_configs:
+  #   - names:
+  #     - 'tasks.caddy'
+  #     type: 'A'
+  #     port: 9108
+
+  #   static_configs:
+  #        - targets: ['caddy:9108']
 
   - job_name: 'cadvisor'
 
@@ -48,8 +69,8 @@ scrape_configs:
       type: 'A'
       port: 8080
 
-#     static_configs:
-#          - targets: ['cadvisor:8080']
+    static_configs:
+         - targets: ['cadvisor:8080']
 
   - job_name: 'node-exporter'
 
@@ -62,5 +83,5 @@ scrape_configs:
       type: 'A'
       port: 9100
     
-#     static_configs:
-#          - targets: ['node-exporter:9100']
+    static_configs:
+         - targets: ['node-exporter:9100']

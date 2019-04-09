@@ -1,0 +1,9 @@
+0.0.0.0
+
+fsx-stats.hkmn.io
+
+log stdout
+
+errors stdout
+
+proxy / grafana:3000
