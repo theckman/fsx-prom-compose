@@ -12,6 +12,7 @@ services:
 
   prometheus:
     image: prom/prometheus:v2.8.1
+    user: root
     volumes:
       - ./prometheus/:/etc/prometheus/
       - /mnt/prometheus_data/:/prometheus
